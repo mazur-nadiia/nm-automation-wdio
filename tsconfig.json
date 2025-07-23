@@ -1,0 +1,49 @@
+{
+    "ts-node": {
+        "files": true,
+        "experimentalSpecifierResolution": "node",
+        "esm": true,
+        "logError": true,
+        "require": ["tsconfig-paths/register"]
+    },
+    "compilerOptions": {
+        "types": [
+            "node",
+            "mocha"
+        ],
+        "lib": ["es6", "es2017", "dom"],
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "declaration": false,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "alwaysStrict": true,
+        "strictNullChecks": false,
+        "strictPropertyInitialization": false,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "noEmit": false,
+        "allowSyntheticDefaultImports": true,
+        "rootDir": "./",
+        "outDir": "./dist",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@e2e-wdio/*": ["./*"],
+            "@page-objects": ["./src/pages"]
+        }
+    },
+    "include": [
+        "./**/*",
+        "./wdio.conf.ts"
+    ],
+    "exclude": ["node_modules", "dist"]
+}
