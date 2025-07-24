@@ -1,5 +1,6 @@
 import { PracticePage } from '../pages'
 import { BaseModal } from '../modals'
+import { expect } from '@wdio/globals';
 
 const testData = [
     {
@@ -37,7 +38,7 @@ describe('E2E - practice form',  () => {
             const submitModal = new BaseModal();
             if (testData.expectSuccess) {
                 await expect(submitModal.modalContainer).toBeDisplayed();
-                await expect(submitModal.titlte).toHaveText('Thanks for submitting the form');
+                await expect(submitModal.title).toHaveText('Thanks for submitting the form');
             } else {
                 await expect(submitModal.modalContainer).not.toBeDisplayed();
             }

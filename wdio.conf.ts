@@ -124,7 +124,6 @@ export const config: WebdriverIO.Config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,

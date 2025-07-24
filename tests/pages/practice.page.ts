@@ -25,4 +25,14 @@ export class PracticePage extends BasePage {
     get submitButton() {
         return $('#submit');
     }
+
+    get userForm() {
+        return $('form');
+    }
+
+    async isOpen(): Promise<boolean> {
+        return await this.title.isDisplayed() &&
+            await this.userForm.isDisplayed() &&
+            (await this.getUrl()).includes('automation-practice-form');
+    }
 }

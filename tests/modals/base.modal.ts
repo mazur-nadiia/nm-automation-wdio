@@ -8,7 +8,7 @@ export class BaseModal {
         return browser.$(this.selector)
     }
 
-    get titlte(): ChainablePromiseElement {
+    get title(): ChainablePromiseElement {
         return this.modalContainer.$('#example-modal-sizes-title-lg')
     }
 

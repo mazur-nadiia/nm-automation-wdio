@@ -9,7 +9,8 @@
     "compilerOptions": {
         "types": [
             "node",
-            "mocha"
+            "mocha",
+            "expect-webdriverio"
         ],
         "lib": ["es6", "es2017", "dom"],
         "target": "ESNext",
@@ -35,15 +36,11 @@
         "typeRoots": [
             "./node_modules/@types"
         ],
-        "baseUrl": ".",
-        "paths": {
-            "@e2e-wdio/*": ["./*"],
-            "@page-objects": ["./src/pages"]
-        }
+        "baseUrl": "."
     },
     "include": [
-        "./**/*",
-        "./wdio.conf.ts"
+        "tests/**/*.ts",
+        "wdio.conf.ts"
     ],
     "exclude": ["node_modules", "dist"]
 }
